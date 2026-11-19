@@ -1,16 +1,118 @@
 ---
+import MainLayout from "../layouts/mainLayout.astro"
+const buttonCode = '<a href="https://crislzy.xyz" target="_blank"><img src="https://user-cdn.hackclub-assets.com/019ed4b1-6838-746d-a6a4-1402670fe71c/88x31.gif" width="88px" height="31px" alt="crislzy.xyz"></a>'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Home">
+    <div class="abt">
+        <img src="https://cdn.hackclub.com/01a096bf-e2cb-7e4c-aa9e-98303a253dce/pfp.png" alt="profile picture"/>
+        <div class="abt-content">
+            <h2>Stuff about me</h2>
+            <p>I'm Cris and I'm a teen developer(kinda) and a <a href="https://hackclub.com">Hack Club</a> member.</p>
+            <p>I like to code random stuff like websites and bots and I enjoy self-hosting.</p>
+            <p>I have a Raspberry Pi home server that is currently ofline because SD card is corrupted.</p>
+            <p>I have 2 lists of tech and software I use: <a href="/tech.txt">tech</a> and <a href="/software.txt">software</a></p>
+        </div>
+    </div>
+    <h3>My statuses</h3>
+    <div class="statuses">
+        <p>I'm <span id="discord-status">Unknown</span> on Discord</p>
+        <script src="/js/discord.js" is:inline></script>
+        <p><span id="lastfm-prefix">Last played:</span> <span id="lastfm-song">loading...</span></p>
+        <script src="/js/lastfm.js" is:inline></script>
+    </div>
+    <br>
+    <p>Btw, here is my cool ass button</p>
+    <img src="https://user-cdn.hackclub-assets.com/019ed4b1-6838-746d-a6a4-1402670fe71c/88x31.gif" />
+    <textarea readonly>{buttonCode}</textarea>
+    <br>
+    <h2>My really cool coding stats</h2>
+    <img
+        src="https://github-readme-stats.hackclub.dev/api/wakatime?username=22875&api_domain=hackatime.hackclub.com&hide_title=true&theme=vision-friendly-dark&layout=compact&cache_seconds=0&langs_count=8"
+        alt="Hackatime coding statistics"
+        loading="lazy"
+    />
+    <br>
+    <h2>Contact me(pls, I have no friends :/)</h2>
+    <ul>
+        <li>Email: <a href="mailto:me@crislzy.xyz">me [at] crislzy [dot] xyz</a></li>
+        <li>HackClub Slack: <a href="https://hackclub.enterprise.slack.com/team/U09TNMQ9MCZ" target="_blank" rel="noopener noreferrer me">CrisLzy</a></li>
+        <li>Github: <a href="https://github.com/crislazy" target="_blank" rel="noopener noreferrer me">Crislazy</a></li>
+        <li>Discord: <a href="https://discord.com/users/1528816581105156200" target="_blank" rel="noopener noreferrer me">Cris(@someone_named_cris)</a></li>
+        <li>Discord Server: <a href="https://r.webcris.icu/discord" target="_blank" rel="noopener noreferrer me">here :3</a></li>
+        <li>Boykisser Page: <a href="https://boykisser.gg/@cris" target="_blank" rel="noopener noreferrer me">here :3</a></li>
+    </ul>
+    <br>
+    <h2>Cool Websites</h2>
+    <div class="buttons">
+        <a href="https://alexanderisashy.one" target="_blank">
+            <img
+                src="https://cdn.hackclub.com/019eb7f6-9096-7359-9ae6-b5d5c4bfa22f/gateway.png"
+                alt="alexanderisashy.one"
+            />
+        </a>
+        <a href="https://hackclub.com" target="_blank">
+            <img
+                src="https://cdn.hackclub.com/019eb7f9-f75f-7bde-ae35-10a1dd55073c/hackclub.gif"
+                alt="hackclub.com"
+                width="88"
+                height="31"
+            />
+        </a>
+        <a href="https://squirrelz.xyz" target="_blank">
+            <img
+                src="https://squirrelz.xyz/squirrelz.png"
+                alt="squirrelz.xyz"
+            />
+        </a>
+        <a href="https://jbc.lol" target="_blank">
+            <img
+                src="https://jbc.lol/sitebutton3.png"
+                alt="jbc.lol"
+                style="image-rendering: pixelated;"
+            />
+        </a>
+        <a href="https://dimden.dev/" target="_blank">
+            <img
+                src="https://dimden.dev/services/images/88x31.gif"
+                alt="dimden.dev"
+            />
+        </a>
+        <a href="https://gizzy.gay">
+            <img src="https://gizzy.gay/88x31.svg" alt="gizzy's button" />
+        </a>
+        <a href="https://firefox.com">
+            <img
+                src="https://cdn.hackclub.com/01a04019-5807-7b1f-89e8-81ed1a59d9e5/firefox.gif"
+                alt="firefox button"
+            />
+        </a>
+        <img
+            src="https://cdn.hackclub.com/01a1eb92-b574-77c9-ab86-86845dcd1b07/made_with_windows.gif"
+            alt="made with windows button"
+        />
+        <a href="https://lcp.neocities.org">
+            <img
+                src="https://lcp.neocities.org/button/me.png"
+                alt="lcp's button! the text ``lcp - https://lcp.neocities.org´´ on a darkslateblue-cyan gradient background"
+            />
+        </a>
+        <a href="https://kanandraw.neocities.org/">
+            <img src="https://kanandraw.neocities.org/stampimg/kananbutton.gif" />
+        </a>
+        <a href="https://sidneyscape.space/">
+            <img src="https://sidneyscape.space/sidneyscape-button.gif" />
+        </a>
+        <a href="https://petrapixel.neocities.org/" target="_blank">
+            <img
+            src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif"
+            alt="petrapixel"
+            />
+        </a>
+        <a target="_blank" href="https://modocrisma.xyz/">
+            <img
+            src="https://modocrisma.xyz/assets/img/8831/modocrisma.gif"
+            />
+        </a>
+    </div>
+</MainLayout>

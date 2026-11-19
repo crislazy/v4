@@ -1,0 +1,11 @@
+===== Software I Use =====
+
+Editor: Zed
+Browser: Firefox
+For PCB's: Kicad
+For 3D stuff: Fusion360 and Blender
+
+
+
+---------------------------
+-> crislzy.xyz / 2026-forever

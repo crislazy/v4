@@ -1,0 +1,132 @@
+/*
+Hey there :3
+*/
+
+/**/
+:root {
+    --bg: #0B0D0C;
+    --text: #F5F5F5;
+    --links: #20A4F3;
+    --warning: #EE4266;
+    --grey: #595959;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.noscript {
+    color: var(--warning);
+    font-weight: bolder;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: monospace;
+    font-size: 13px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, p, li {
+    margin: 0.4rem 0;
+}
+
+a {
+    color: var(--links);
+}
+
+hr {
+    margin: 0.5rem 0;
+    border-color: white;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: var(--grey);
+}
+
+main {
+    margin-left: 100px;
+    padding: 1px 16px;
+    line-height: 1.4;
+    display: flex;
+    min-height: calc(100vh - 2rem);
+    flex-direction: column;
+}
+
+.abt {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.abt img {
+    width: auto;
+    height: 125px;
+    object-fit: cover;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex: 1;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.buttons img {
+    width: 88px;
+    height: 31px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid white;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction:row;
+  }
+  .sidebar a {float: none; text-align:center;}
+  main {
+      margin-left: 0;
+      padding: 1px 0;
+  }
+}

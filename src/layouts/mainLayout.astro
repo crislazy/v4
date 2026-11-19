@@ -1,0 +1,74 @@
+---
+const { title = "", desc = "My website and more", type = "website" } = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!--
+_    _      _ _         _   _                                           _
+| |  | |    | | |       | | | |                                         | |
+| |__| | ___| | | ___   | |_| |__   ___ _ __ ___     _   _ ___  ___ _ __| |
+|  __  |/ _ \ | |/ _ \  | __| '_ \ / _ \ '__/ _ \   | | | / __|/ _ \ '__| |
+| |  | |  __/ | | (_) | | |_| | | |  __/ | |  __/_  | |_| \__ \  __/ |  |_|
+|_|  |_|\___|_|_|\___/   \__|_| |_|\___|_|  \___( )  \__,_|___/\___|_|  (_)
+                                               |/
+Thanks for checking out the code :3
+-> Please check out the license for the website on https://github.com/crislazy/v4 before reusing part of my websites code. Thanks <3
+-->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="https://cdn.hackclub.com/01a096bf-e2cb-7e4c-aa9e-98303a253dce/pfp.png" />
+		<link rel="stylesheet" type="text/css" href="/styles/main.css?v=0.1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content={Astro.generator} />
+		<title>Cris's Corner - {title}</title>
+		<meta name="title" content={title}>
+		<meta name="description" content={desc}>
+		<meta name="keywords" content="cris, crislzy, crislazy, personal website, hackclub, coding, teen">
+		<meta name="author" content="Cris">
+		<link rel="canonical" href={url}>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={desc}>
+		<meta property="og:type" content={type}>
+		<meta property="og:url" content={url}>
+		<meta property="og:image" content="https://cdn.hackclub.com/01a096bf-e2cb-7e4c-aa9e-98303a253dce/pfp.png">
+		<meta property="og:site_name" content="Cris's Corner">
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content={url}>
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={desc}>
+		<meta name="twitter:image" content="https://cdn.hackclub.com/01a096bf-e2cb-7e4c-aa9e-98303a253dce/pfp.png">
+		<meta name="twitter:creator" content="@crislzy">
+	</head>
+	<body>
+	<nav class="sidebar">
+		<a href="/">home</a>
+		<a href="/projects">projects</a>
+		<a href="/webrings">webrings</a>
+		<a href="/blog">blog</a>
+	</nav>
+    <main>
+        <div class="content">
+            <noscript><p class="noscript">Hey there, it looks like your browser does not support JavaScript, this means some parts of the website might not function properly :(</p></noscript>
+            <slot />
+        </div>
+    	<footer>
+    	    <p>&copy; crislzy.xyz 2026-forever</p>
+    		<a href="https://status.crislzy.xyz/status/home">status page</a>
+    	</footer>
+	</main>
+	<!-- Umami Script-->
+        {import.meta.env.PROD && (
+            <script
+                defer
+                src="https://umm.crislzy.xyz/script.js"
+                data-website-id="bc19e607-74b6-4fcd-83cb-c60c75d8c329"
+            ></script>
+        )}
+	</body>
+</html>
