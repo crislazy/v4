@@ -1,3 +1,5 @@
+document.getElementById("lastfm-song").innerHTML = "Loading..."
+
 async function updateLastFM() {
     try {
         const res = await fetch(

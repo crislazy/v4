@@ -130,3 +130,8 @@ footer {
       padding: 1px 0;
   }
 }
+@media screen and (max-width: 500px) {
+    .hackatime-stats{
+        width: 90vw;
+    }
+}

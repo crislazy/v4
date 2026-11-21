@@ -1,3 +1,5 @@
+document.getElementById("discord-status").innerHTML = "Loading..."
+
 async function discordstatus() {
   const statusElement = document.getElementById("discord-status");
 

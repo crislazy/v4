@@ -16,9 +16,9 @@ const buttonCode = '<a href="https://crislzy.xyz" target="_blank"><img src="http
     </div>
     <h3>My statuses</h3>
     <div class="statuses">
-        <p>I'm <span id="discord-status">Unknown</span> on Discord</p>
+        <p>I'm <span id="discord-status">(couldn't load)</span><b title="Status from Discord" style="position: relative; cursor: pointer; font-size: 10px; top: -8px;">(?)</b></p>
         <script src="/js/discord.js" is:inline></script>
-        <p><span id="lastfm-prefix">Last played:</span> <span id="lastfm-song">loading...</span></p>
+        <p><span id="lastfm-prefix">Last played:</span> <span id="lastfm-song">(couldn't load)</span><b title="From LastFM" style="position: relative; cursor: pointer; font-size: 10px; top: -8px;">(?)</b></p>
         <script src="/js/lastfm.js" is:inline></script>
     </div>
     <br>
@@ -31,6 +31,7 @@ const buttonCode = '<a href="https://crislzy.xyz" target="_blank"><img src="http
         src="https://github-readme-stats.hackclub.dev/api/wakatime?username=22875&api_domain=hackatime.hackclub.com&hide_title=true&theme=vision-friendly-dark&layout=compact&cache_seconds=0&langs_count=8"
         alt="Hackatime coding statistics"
         loading="lazy"
+        class="hackatime-stats"
     />
     <br>
     <h2>Contact me(pls, I have no friends :/)</h2>
